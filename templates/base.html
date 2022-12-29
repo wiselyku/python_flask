@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+	table, td, th {
+ 		border: 1px solid #ddd;
+  		text-align: left;
+	}
+
+	table {
+  		border-collapse: collapse;
+  		width: 100%;
+	}
+
+	th, td {
+  		padding: 15px;
+	}
+</style>
+</head>
+
+<body>
+
+    <h1>Wisely's To Do List</h1>
+    <table>
+	    <tr>
+   		 <th>Index</th>
+    		 <th>Title</th>
+    	   	 <th>Is Completed</th>
+ 	    </tr>
+    {% for todo in todo_list %}
+
+            <tr>
+		    <th>{{ todo.id }}</th>
+		    <th>{{ todo.title }}</th>
+		    <th>{{ todo.is_completed }}</th>
+            </tr>
+
+    {% endfor %}
+    </table>
+</body>
+
+</html>
+
